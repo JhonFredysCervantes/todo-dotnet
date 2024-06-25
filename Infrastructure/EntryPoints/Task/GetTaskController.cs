@@ -3,6 +3,9 @@ using ToDo.Domain.UseCases;
 
 namespace ToDo.Infrastructure.EntryPoints;
 
+[ApiController]
+[Route("[controller]")]
+[Produces("application/json")]
 public class GetTaskController : ControllerBase
 {
     private readonly GetTask _getTask;

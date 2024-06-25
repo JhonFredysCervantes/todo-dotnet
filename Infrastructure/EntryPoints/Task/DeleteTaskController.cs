@@ -4,6 +4,9 @@ using Task = ToDo.Domain.Model.Task;
 
 namespace ToDo.Infrastructure.EntryPoints;
 
+[ApiController]
+[Route("[controller]")]
+[Produces("application/json")]
 public class DeleteTaskController : ControllerBase
 {
     private readonly DeleteTask _deleteTask;

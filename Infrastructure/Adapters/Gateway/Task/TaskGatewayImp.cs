@@ -55,7 +55,10 @@ public class TaskGatewayImp : ITaskGateway
 
     public Task UpdateTask(Task task)
     {
-        var taskEntity = TaskEntity.toEntity(task);
+        var taskEntity = _context.Tasks.Find(task.Id);
+        taskEntity.Title = task.Title;
+        taskEntity.Description = task.Description;
+        taskEntity.IsCompleted = task.IsCompleted;
         _context.Tasks.Update(taskEntity);
         _context.SaveChanges();
         return task;

@@ -4,6 +4,9 @@ using Task = ToDo.Domain.Model.Task;
 
 namespace ToDo.Infrastructure.EntryPoints;
 
+[ApiController]
+[Route("[controller]")]
+[Produces("application/json")]
 public class TaskController : ControllerBase
 {
     private readonly CreateTask _createTask;
