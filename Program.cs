@@ -17,6 +17,7 @@ builder.Services.AddSqlServer<TodoContext>(builder.Configuration.GetConnectionSt
 builder.Services.AddScoped<ICategoryGateway, CategoryGatewayImp>();
 builder.Services.AddScoped<ITaskGateway, TaskGatewayImp>();
 
+// It is recommended to use an interface for each use case, but for the sake of simplicity, I will use the class directly.
 builder.Services.AddScoped<CreateTask>();
 builder.Services.AddScoped<DeleteTask>();
 builder.Services.AddScoped<GetTask>();
