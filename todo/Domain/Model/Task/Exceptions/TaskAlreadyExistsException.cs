@@ -1,6 +1,6 @@
 using ToDo.Domain.Model.Exceptions;
 
-namespace ToDo.Domain.Model.Exception;
+namespace ToDo.Domain.Model.Exception.Task;
 
 public class TaskAlreadyExistsException : BaseException
 {

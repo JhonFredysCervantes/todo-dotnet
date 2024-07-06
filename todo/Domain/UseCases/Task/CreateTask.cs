@@ -1,5 +1,5 @@
 using ToDo.Domain.Model;
-using ToDo.Domain.Model.Exception;
+using ToDo.Domain.Model.Exception.Task;
 using Task = ToDo.Domain.Model.Task;
 
 namespace ToDo.Domain.UseCases;
