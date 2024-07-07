@@ -56,6 +56,7 @@ public class CreateTaskTests
         .Returns(() => validTask);
 
         var exception = Assert.Throws<TaskAlreadyExistsException>(() => createTask.Execute(validTask));
+        Console.WriteLine(exception.Message);
 
         Assert.Equal("TaskAlreadyExistsException", exception.Error.Name);
         Assert.Equal("TD-T-002", exception.Error.Code);
